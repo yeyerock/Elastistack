@@ -10,31 +10,31 @@
 	position: relative;
 	margin: 10% auto;
 	padding: 0;
-	width: 340px;
-	height: 380px;
+	width: 80%;
+	height: 80vw;
 	list-style: none;
 	-webkit-perspective: 1000px;
 	-webkit-perspective-origin: 50% 150%;
 	perspective: 1000px;
-	perspective-origin: 50% 150%;
+	perspective-origin: 50% 150%;	
+	padding: 2rem;
+	box-sizing: border-box;
+	border: 1px solid red;
 }
 
-.no-js .elasticstack {
-	max-width: 1090px;
-	width: 100%;
-	height: auto;
-	text-align: center;
-}
+
 
 .elasticstack li {
 	position: absolute;
+	margin: 0 auto;
 	z-index: 1;
-	width: 340px;
-	height: 380px;
-	border-width: 20px 20px 60px 20px;
+	width: 80vw;
+	height: 80vw;
+	border-width: 20px 20px 130px 20px;
 	border-style: solid;
 	border-radius: 2rem 2rem 2rem 2rem;
-	background: rgba(22, 7, 7, 0.8);
+	border-color: #dedede;
+	background:#dedede;
 	box-shadow: 0 10px 7px -7px rgba(0,0,0,0.12), 0 0 4px rgba(0,0,0,0.1);
 	opacity: 0;
 	cursor: pointer;
@@ -42,6 +42,7 @@
 	transform: translate3d(0,0,-180px);
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	
 }
 
 .no-js .elasticstack li {
@@ -56,19 +57,20 @@
 
 .elasticstack li img {
 	display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
-  border-radius: 0.75rem;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
 .elasticstack li h5 {
 	margin: 0 5px;
 	color: gray;
 	height: 60px;
-	text-align: right;
-	font-size: 1.4em;
+	text-align: center;
+	font-size: 1.2rem;
 	font-family: 'Raleway', sans-serif;
-	line-height: 60px;
+	line-height: 2.5;
 }
 
 .elasticstack li.animate {
