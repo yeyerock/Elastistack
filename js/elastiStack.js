@@ -157,7 +157,8 @@
 				
 				// reset first item
 				setTransformStyle( instance.element, is3d ? 'translate3d(0,0,-180px)' : 'translate(0,0,0)' );
-				instance.element.style.left = instance.element.style.top = '0px';
+				instance.element.style.left  = '0px';
+				instance.element.style.top = '0px';
 				instance.element.style.zIndex = -1;
 				classie.remove( instance.element, 'animate' );
 
@@ -220,6 +221,7 @@
 	};
 
 	ElastiStack.prototype._onDragStart = function( instance, event, pointer ) {
+
 		// remove transition classes if any
 		var item2 = this._secondItem(), item3 = this._thirdItem();
 
@@ -397,3 +399,5 @@
 	window.ElastiStack = ElastiStack;
 
 })( window );
+
+new ElastiStack( document.getElementById( 'elasticstack' ) );

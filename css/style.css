@@ -5,44 +5,61 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+body {
+	font-family: 'Lato', Arial, sans-serif;
+	background: #add8df;
+	color: #fff;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-weight: 300;
+}
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .elasticstack {
 	position: relative;
-	margin: 10% auto;
+	margin: 1rem ;
 	padding: 0;
-	width: 80%;
-	height: 80vw;
+	width: 75%;
+    height: 53vh;
 	list-style: none;
 	-webkit-perspective: 1000px;
 	-webkit-perspective-origin: 50% 150%;
 	perspective: 1000px;
-	perspective-origin: 50% 150%;	
-	padding: 2rem;
-	box-sizing: border-box;
-	border: 1px solid red;
+    perspective-origin: 50% 150%;
+    display: flex;
+    justify-content: center;
 }
 
+.no-js .elasticstack {
+	max-width: 1090px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
 
 
 .elasticstack li {
 	position: absolute;
-	margin: 0 auto;
 	z-index: 1;
-	width: 80vw;
-	height: 80vw;
-	border-width: 20px 20px 130px 20px;
+	width: 100%;
+    height: 100%;
+	border-width: 20px 20px 60px 20px;
 	border-style: solid;
-	border-radius: 2rem 2rem 2rem 2rem;
-	border-color: #dedede;
-	background:#dedede;
-	box-shadow: 0 10px 7px -7px rgba(0,0,0,0.12), 0 0 4px rgba(0,0,0,0.1);
-	opacity: 0;
-	cursor: pointer;
+    border-color:rgb(15, 52, 67);
+    background:rgb(15, 52, 67); 
+    box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),            0px 1px 1px 0px rgba(0, 0, 0, 0.14),            0px 1px 3px 0px rgba(0,0,0,.12);
+    cursor: pointer;
 	-webkit-transform: translate3d(0,0,-180px);
 	transform: translate3d(0,0,-180px);
 	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	
+    transform-style: preserve-3d;
+    border-radius: 4px;
+    
 }
 
 .no-js .elasticstack li {
@@ -52,25 +69,35 @@
 	margin: 10px;
 	cursor: default;
 	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
-.elasticstack li img {
-	display: block;
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 50%;
+.elasticstack li .foto{
+    border-radius: 50%;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 90%;
 }
 
-.elasticstack li h5 {
-	margin: 0 5px;
-	color: gray;
-	height: 60px;
-	text-align: center;
-	font-size: 1.2rem;
-	font-family: 'Raleway', sans-serif;
-	line-height: 2.5;
+.elasticstack li:nth-child(1) .foto{ background-image: url("../images/gonzo.jpg"); }
+.elasticstack li:nth-child(2) .foto{ background-image: url("../images/jose.jpg"); }
+.elasticstack li:nth-child(3) .foto{ background-image: url("../images/erik.jpg"); }
+
+.elasticstack li .titulo-foto{
+    margin:1rem auto;
+    height: 3.2rem;
+    background: rgb(44, 83, 100);
+    border-radius: 4px; 
+    text-align: center;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.elasticstack li .titulo-foto h5 {
+	color: rgb(52, 232, 158);	
+    font-size: 1.2rem;
 }
 
 .elasticstack li.animate {
@@ -79,7 +106,6 @@
 }
 
 .elasticstack li.move-back {
-	/* http://matthewlein.com/ceaser/ */
 	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1); /* older webkit */
 	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1.515);
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.470, 1.515);
